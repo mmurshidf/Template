@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#icon').click(function(){
+          $('ul').toggleClass('bar');
+        });
+      });
+    </script>
+    <title>Welcome Page</title>
+</head>
+<body>
+  <nav class="nav">
+    <a class="name" href="/">Website Name</a>
+    <ul>
+      {% if user.is_authenticated %}
+      <li><a href="/home">Home</a></li>
+      <li><a href="/logout">Logout</a></li>
+      {% else %}
+      <li><a href="/home">Home</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/sign-up">Sign Up</a></li>
+      {% endif %}
+    </ul>
+    <label id="icon">
+      <i class="fa fa-bars"></i>
+    </label>
+  </nav>
+  <header id="Hook">
+    <div id="Content">
+      <h1>Template</h1>
+      <p>This is a source that can be used as a template for websites. It provides a welcome page, navigation bar, and a working log-logout-signup features with a database!</p>
+      <a href="/home">Button</a>
+    </div>
+  </header>
+  <div class="after">
+    <h2 class="text">How does it work?</h2>
+    <div class="insa">
+      <div class="ins" id="ins_a">
+        <h3 class="text">Step 1</h3>
+        <p class="text">Work-Out</p>
+        <p class="text2">Anything counts, deadlifts, squats, Dumbell curls, push-ups, even basketball points! However, everything is worth 1 point.</p>
+      </div>
+      <div class="ins" id="ins_b">
+        <h3 class="text">Step 2</h3>
+        <p class="text">Convert stats to points and add it to the system</p>
+        <p class="text2">Log in your numbers including: sets, reps, weight, and exercise.</p>
+      </div>
+      <div class="ins" id="ins_c">
+        <h3 class="text">Step 3</h3>
+        <p class="text">Rest and Repeat!</p>
+        <p class="text2">Compare your score to other lifters in the system!</p>
+      </div>
+    </div>
+  </div>
+  <div class="warn">
+    <div class="note">
+      <h2>NOTE!</h2>
+      <P>Everything here is updatable!</P>
+      
+      <p>Enjoy!</p>
+    </div>
+  </div>
+  <footer>
+    <div class="footer">
+      <h3>Mohammed Murshid | Name</h3>
+      <h4>Contact Us: test@gmail.com</h4>
+    </div>
+  </footer>
+</body>
+</html>

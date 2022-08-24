@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#icon').click(function(){
+          $('ul').toggleClass('bar');
+        });
+      });
+    </script>
+    <title>Home</title>
+</head>
+<body>
+  <nav class="nav">
+    <a class="name" href="/">Website Name</a>
+    <ul>
+      {% if user.is_authenticated %}
+      <li><a href="/home">Home</a></li>
+      <li><a href="/logout">Logout</a></li>
+      {% else %}
+      <li><a href="/home">Home</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/sign-up">Sign Up</a></li>
+      {% endif %}
+    </ul>
+    <label id="icon">
+      <i class="fa fa-bars"></i>
+    </label>
+  </nav>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in message %}
+    {% if category== 'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% endwith %}
+  <h1>This is home page!</h1>
+</body>
+</html>

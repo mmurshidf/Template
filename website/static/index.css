@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    margin:0;
+    font-size: 17px;
+    line-height:1.6;
+}
+#Hook {
+    background-image: url('../static/gym.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 88.75vh;
+    color: white;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding:0 20px;
+}
+#Content {
+    height: 88.75vh;
+    color: white;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding:0 20px;
+    text-align: center;
+}
+#Content h1{
+    font-size: 50px;
+    line-height: 1.2;;
+}
+
+#Content p{
+    font-size: 20px;
+}
+
+#Content a{
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    border: white 3px solid;
+    padding:10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+#Content a:hover{
+    background: gray;
+    transition: .25s;
+    color: white;
+}
+.after {
+    background-color: #00A693;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+}
+.after h2{
+    color: black;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding:20px 0 20px 0;
+    text-align: center;
+    text-decoration: underline;
+}
+.insa {
+    display: flex;
+    text-align: center;
+    color:white;
+}
+.ins h3{
+    text-decoration: underline;
+}
+.ins {
+    text-align: center !important;
+    width: 300px !important;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3) !important;
+    padding: 20px !important;
+    padding-top: 30px !important;
+    margin: 2% auto 0 !important;
+    border-radius: 10px !important;
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+#ins_a{
+    background-image:url('../static/Workoutpic.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px black solid;
+}
+#ins_b{
+    background-image:url('../static/score.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px black solid;
+}
+#ins_c{
+    background-image:url('../static/dumbbell.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px black solid;
+}
+.note {
+    color: black;
+    display:flex;
+    flex-direction:column;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    padding:20px 0 20px 0;
+}
+.note p{
+    padding: 10px;
+}
+.note h2{
+    text-decoration: underline;
+}
+.warn {
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+}
+footer {
+    background: #2F4F4F;
+    background-size: cover;
+    background-position: center;
+    height: 15vh;
+    color: white;
+}
+.footer {
+    color: white;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding:20px 0 20px 0;
+    text-align: center;
+    font-family: sans-serif;
+}
+.footer h3{
+    font-size: 15px;
+}
+.footer h4{
+    font-size: 10px;
+}

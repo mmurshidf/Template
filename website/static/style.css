@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Mont';
+    src: url(../static/Mont.otf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: 'Mont', sans-serif;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background: #2F4F4F;
+}
+a.name{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    padding: 0 100px;
+    line-height: 80px;
+}
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+    font-weight: bold;
+}
+nav a{
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 1;
+    border-radius: 3px;
+    font-weight: bold;
+}
+a:hover{
+    transition: .25s;
+    color: gray;
+}
+nav #icon{
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 1048px){
+    a.name{
+        font-size: 32px !important;
+        padding-left: 60px !important;
+    }
+    nav ul{
+        margin-right: 20px !important;
+    }
+    nav a{
+        font-size: 17px !important;
+    }
+}
+@media (max-width: 909px){
+    nav #icon{
+        display: block !important;
+    }
+    nav ul{
+        position: fixed !important;
+        width: 100% !important;
+        height: 100vh !important;
+        background: #2F4F4F !important;
+        top: 80px !important;
+        left: -100% !important;
+        text-align: center !important;
+        transition: all 1s !important;
+    }
+    nav li{
+        display: block !important;
+        margin: 50px 0 !important;
+        line-height: 30px !important;
+    }
+    nav a{
+        font-size: 20px !important;
+    }
+    a:hover{
+        border: none !important;
+        color: gray !important;
+    }
+    nav ul.bar{
+        left: 0 !important;
+    }
+}
